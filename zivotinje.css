@@ -1,0 +1,26 @@
+input[type = "number"] {
+    width: 100px;
+    display: inline;
+}
+.zivotinja img {
+    width: 100%;
+}
+.psi #banner {
+    background-color: #e7d8d3;
+}
+.macke #banner {
+    background-color: #dad8d7;
+}
+.ptice #banner {
+    background-color: #e8f6e6;
+}
+#banner {
+    font-size: 40px;
+    font-weight: bold;
+}
+#opcije td {
+    padding: 5px;
+}
+#primeni {
+    margin-top: 10px;
+}

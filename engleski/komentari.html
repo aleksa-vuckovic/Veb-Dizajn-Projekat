@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riska - Lost pets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href = "../headfoot.css" rel = "stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row header align-items-center px-3">
+            <div class = "col-12 justify-content-end align-items-start py-0 text-end" style = "margin-bottom: -30px">
+                <a href = "../srpski/index.html"><img src="../slike/srbija.png" width = "20px"></a> &nbsp;
+                <a href = "index.html"><img src="../slike/britanija.jpg" width = "20px"></a>
+            </div>
+            <div class="col-4 col-md-3 col-lg-2">
+                <a href = "index.html"><img src = "../slike/logo.jpg" width = "150px"></a>
+            </div>
+            <div class = "col-8 col-md-9 col-lg-10">
+                    <h1 class = "title">Riska</h1>
+                    <h5>Animal Shelter</h5>
+            </div>
+        </div>
+        <div class="row border-bottom">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Animals
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="psi.html">Dogs</a></li>
+                        <li><a class="dropdown-item" href="macke.html">Cats</a></li>
+                        <li><a class="dropdown-item" href="ptice.html">Birds</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current = "page" href="oglasi.html">Lost Pets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href = "novioglas.html">Add Lost Pet Ad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href = "nalog.html">Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href = "onama.html">About Us</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row bg-light">
+            <nav aria-label="breadcrumb" class = "align-self-center">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="oglasi.html">Lost pets</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Comments</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row bg-babyyellow border-bottom p-3">
+            <div class="col-12 col-md-4">
+                <img id = "slika" width = "100%" class = "rounded">
+            </div>
+            <div class="col-12 col-md-8 p-2 px-4">
+                <h4 id = "naziv"></h4>
+                <p id = "paragraf"></p>
+            </div>
+        </div>
+        <div class="row bg-light p-3" id = "komentari">
+        </div>
+        <div class = "row bg-babyyellow p-3" id = "novikomentar">
+            <div class = "col-10 border komentar border-3 m-3 p-4" style = "border-radius: 20px; background-color: white">
+                <h3>Leave a comment:</h3>
+                <h4 id = "trenutniKorisnik"></h4>
+                <textarea rows = "5" cols="100" style="max-width:100%;" id = "tekst"></textarea>
+                <br>
+                <button class = "btn btn-basic" id = "posalji">Send</button>
+            </div>
+        </div>
+        <div class="row footer p-3 pt-4">
+            <div class = "col-12">
+                Copyright 2022, Aleksa Vučković, Software Engineering Department at the School of Electrical Engineering of the University of Belgrade<br>
+            </div>
+            <div class="col-12 pt-2">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+        </div>
+    </div>
+    <script src = "../komentari.js"></script>
+</body>
+</html>

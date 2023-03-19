@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riska - Mačke</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href = "../headfoot.css" rel = "stylesheet">
+    <link href = "../zivotinje.css" rel = "stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container macke">
+        <div class="row header align-items-center px-3">
+            <div class = "col-12 justify-content-end align-items-start py-0 text-end" style = "margin-bottom: -30px">
+                <a href = "index.html"><img src="../slike/srbija.png" width = "20px"></a> &nbsp;
+                <a href = "../engleski/index.html"><img src="../slike/britanija.jpg" width = "20px"></a>
+            </div>
+            <div class="col-4 col-md-3 col-lg-2">
+                <a href = "index.html"><img src = "../slike/logo.jpg" width = "150px"></a>
+            </div>
+            <div class = "col-8 col-md-9 col-lg-10">
+                    <h1 class = "title">Riska</h1>
+                    <h5>Azil za kućne ljubimce</h5>
+            </div>
+        </div>
+        <div class = "row border-bottom">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Početna</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Životinje
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="psi.html">Psi</a></li>
+                        <li><a class="dropdown-item active" aria-current = "page" href="macke.html">Mačke</a></li>
+                        <li><a class="dropdown-item" href="ptice.html">Ptice</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="oglasi.html">Izgubljeni ljubimci</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href = "novioglas.html">Dodaj oglas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href = "nalog.html">Moj nalog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href = "onama.html">O nama</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row bg-light">
+            <nav aria-label="breadcrumb" class = "align-self-center">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Početna</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Mačke</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row p-3" id = "banner">
+            Mačke
+        </div>
+        <div class = "row">
+            <div class="col-12 col-md-4 col-lg-3 p-2 bg-light border-end" id = "opcije">
+                <div id = "sort" class = "border-bottom w-100 p-2">
+                    <h5>Sortiraj po:</h5>
+                    <select class="form-select" id = "selekt">
+                        <option value="0" selected>Nazivu rastuće</option>
+                        <option value="1">Nazivu opadajuće</option>
+                        <option value="2">Starosti rastuće</option>
+                        <option value="3">Starosti opadajuće</option>
+                      </select>
+                </div>
+                <div id = "filter" class = "border-bottom w-100 p-2 pt-4">
+                    <h5>Filtriraj po:</h5>
+                    <h6>Imenu</h6>
+                    <input class="form-control" type="text" placeholder="Unesite ime" id = "ime"><br>
+                    <h6>Starosti</h6>
+                    <table>
+                        <tr>
+                            <td>Od</td>
+                            <td><input class = "form-control" type = "number" value = "0" id = "od"></td>
+                        </tr>
+                        <tr>
+                            <td>Do</td>
+                            <td><input class = "form-control" type = "number" value = "20" id = "do"></td>
+                        </tr>
+                    </table>
+                    <button class = "btn btn-secondary" id = "primeni">Primeni</button>
+                </div>
+            </div>
+            <div class = "col-12 col-md-8 col-lg-9" id = "lista">
+            </div>
+        </div>
+        <div class="row footer p-3 pt-4">
+            <div class = "col-sm-12">
+                Copyright 2022, Aleksa Vučković, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu<br>
+            </div>
+            <div class="col-sm-12 pt-2">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+        </div>
+    </div>
+    <script src = "../zivotinje.js"></script>
+    <script>
+        function isEnglish() {return false;}
+        function generisiTip() {return "macke";}
+        function generisiZivotinje() {
+        return [{
+            ime: "Tanja",
+            tezina: "15kg",
+            starost: 5,
+            slika: "../slike/macka1.jpg",
+            galerija : ["../slike/macka1.jpg", "../slike/macka10.jpg"],
+            video : ["../video/macka1.mp4"],
+            opis: "Tanja je slatka i lepa maca. Hitno joj je potreban novi dom!"
+        },
+        {
+            ime: "Sanja",
+            tezina : "5kg",
+            starost: 3,
+            slika : "../slike/macka2.jpg",
+            galerija : ["../slike/macka2.jpg", "../slike/macka9.jpg"],
+            video : ["../video/macka2.mp4", "../video/macka3.mp4"],
+            opis: "Sanja je radoznala i zabavna. Voli da se igra, ali i da odmara na haubi."
+        },
+        {
+            ime: "Katja",
+            tezina: "10kg",
+            starost: 4,
+            slika: "../slike/macka5.jpg",
+            galerija : ["../slike/macka5.jpg", "../slike/macka11.jpg"],
+            video : [],
+            opis: "Katja je zabavna i umiljata. Udomite je!!!"
+        }
+        ]
+        }
+    </script>
+</body>
+</html>

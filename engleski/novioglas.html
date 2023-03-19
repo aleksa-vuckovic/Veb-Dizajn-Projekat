@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riska - Add Lost Pet Ad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href = "../headfoot.css" rel = "stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row header align-items-center px-3">
+            <div class = "col-12 justify-content-end align-items-start py-0 text-end" style = "margin-bottom: -30px">
+                <a href = "../srpski/index.html"><img src="../slike/srbija.png" width = "20px"></a> &nbsp;
+                <a href = "index.html"><img src="../slike/britanija.jpg" width = "20px"></a>
+            </div>
+            <div class="col-4 col-md-3 col-lg-2">
+                <a href = "index.html"><img src = "../slike/logo.jpg" width = "150px"></a>
+            </div>
+            <div class = "col-8 col-md-9 col-lg-10">
+                    <h1 class = "title">Riska</h1>
+                    <h5>Animal Shelter</h5>
+            </div>
+        </div>
+        <div class="row border-bottom">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Animals
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="psi.html">Dogs</a></li>
+                        <li><a class="dropdown-item" href="macke.html">Cats</a></li>
+                        <li><a class="dropdown-item" href="ptice.html">Birds</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="oglasi.html">Lost Pets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href = "novioglas.html">Add Lost Pet Ad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href = "nalog.html">Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href = "onama.html">About Us</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row bg-light">
+            <nav aria-label="breadcrumb" class = "align-self-center">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Add Lost Pet Ad</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row py-3 border-bottom bg-light">
+            <div class="col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                <h4>Lost your pet? Fill in this form, post an ad, and join 1000+ users who found their pets using our website!</h4>
+            </div>
+        </div>
+        <div class = "row pt-2 bg-babyyellow">
+            <div class="col-sm-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4 pb-2">
+                <div id = "forma">
+                    <form>
+                        <div class="mb-3">
+                            <label for="formaNaziv" class="form-label">Title: *</label>
+                            <input type="text" class="form-control" id="formaNaziv" aria-describedby="nazivHelp">
+                            <div id="nazivHelp" class="form-text">We recommend using your pet's name, type and breed for the title. For example "Dog Dingo, Golden Retriever"</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formaOpis" class="form-label">Description: *</label>
+                            <textarea class="form-control" id="formaOpis" aria-describedby="opisHelp" style = "max-width: 100%" cols = "100" rows = "3"></textarea>
+                            <div id="opisHelp" class="form-text">Describe your pet briefly and add the time and place where it was last seen.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formaTelefon" class="form-label">Phone number: *</label>
+                            <input type="text" class="form-control" id="formaTelefon">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formaSlika" class="form-label">Photo</label>
+                            <input type="text" class="form-control" id="formaSlika" aria-describedby="slikaHelp">
+                            <div id="slikaHelp" class="form-text">Adding a photo is not mandatory, but it is recommended. To add a photo, copy and paste the link here.</div>
+                        </div>
+                        <div id="formaGreska" class="form-text text-danger pb-2"></div>
+                        <button type="button" class="btn btn-primary" id = "okaci">Post</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row footer p-3 pt-4">
+            <div class = "col-sm-12">
+                Copyright 2022, Aleksa Vučković, Software Engineering Department at the School of Electrical Engineering of the University of Belgrade<br>
+            </div>
+            <div class="col-sm-12 pt-2">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+        </div>
+        <script src = "../novioglas.js"></script>
+        <script>
+            function isEnglish() {
+                return true;
+            }
+        </script>
+</body>
+</html>

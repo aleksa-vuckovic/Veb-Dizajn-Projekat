@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riska - Nalog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href = "../headfoot.css" rel = "stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row header align-items-center px-3">
+            <div class = "col-12 justify-content-end align-items-start py-0 text-end" style = "margin-bottom: -30px">
+                <a href = "index.html"><img src="../slike/srbija.png" width = "20px"></a> &nbsp;
+                <a href = "../engleski/index.html"><img src="../slike/britanija.jpg" width = "20px"></a>
+            </div>
+            <div class="col-4 col-md-3 col-lg-2">
+                <a href = "index.html"><img src = "../slike/logo.jpg" width = "150px"></a>
+            </div>
+            <div class = "col-8 col-md-9 col-lg-10">
+                    <h1 class = "title">Riska</h1>
+                    <h5>Azil za kućne ljubimce</h5>
+            </div>
+        </div>
+        <div class="row border-bottom">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Početna</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Životinje
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="psi.html">Psi</a></li>
+                        <li><a class="dropdown-item" href="macke.html">Mačke</a></li>
+                        <li><a class="dropdown-item" href="ptice.html">Ptice</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="oglasi.html">Izgubljeni ljubimci</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href = "novioglas.html">Dodaj oglas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href = "nalog.html">Moj nalog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href = "onama.html">O nama</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row bg-light">
+            <nav aria-label="breadcrumb" class = "align-self-center">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Početna</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Moj nalog</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row bg-light p-3" id = "log">
+            <div class="col-sm-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+                <div id = "prijava">
+                    <form>
+                        <div class="mb-3">
+                            <label for="prijavaId" class="form-label">Korisničko ime</label>
+                            <input type="text" class="form-control" id="prijavaId">
+                            <div id="prijavaIdGreska" class="form-text text-danger"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="prijavaLozinka" class="form-label">Lozinka</label>
+                            <input type="password" class="form-control" id="prijavaLozinka">
+                            <div id="prijavaLozinkaGreska" class="form-text text-danger"></div>
+                        </div>
+                        <button type="button" class="btn btn-primary" id = "prijavi">Prijavi se</button>
+                    </form>
+                    <hr>
+                    <p>Nemate nalog? Registrujte se <a href = "#" id = "regbtn">ovde</a>.</p>
+                </div>
+                <div id = "registracija">
+                    <form>
+                        <div class="mb-3">
+                            <label for="registracijaMejl" class="form-label">Email adresa</label>
+                            <input type="email" class="form-control" id="registracijaMejl" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">Ostali korisnici neće videti vaš mejl.</div>
+                            <div id="registracijaMejlGreska" class="form-text text-danger"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registracijaId" class="form-label">Korisničko ime</label>
+                            <input type="text" class="form-control" id="registracijaId">
+                            <div id="registracijaIdGreska" class="form-text text-danger"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registracijaLozinka" class="form-label">Lozinka</label>
+                            <input type="password" class="form-control" id="registracijaLozinka">
+                            <div id="registracijaLozinkaGreska" class="form-text text-danger"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registracijaSlika" class="form-label">Slika</label>
+                            <input type="text" class="form-control" id="registracijaSlika" aria-describedby="imageHelp">
+                            <div id="imageHelp" class="form-text">Unesite link ili putanju do slike, ili ostavite prazno za podrazumevanu profilnu sliku.</div>
+                            <div id="registracijaSlikaGreska" class="form-text text-danger"></div>
+                        </div>
+                        <button type="button" class="btn btn-primary" id = "registruj">Registruj se</button>
+                    </form>
+                </div>
+                <div id = "uspesnaRegistracija">
+                    <div class="alert alert-success mt-3" role="alert">
+                        Uspešno ste se registrovali!<br>Kliknite <a href = "nalog.html">ovde</a> kako biste se prijavili.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "row p-3 align-items-end border-bottom bg-babyyellow" id = "profil">
+            <div class = "col-sm-12">
+                <h4>Profil</h4>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <img id = "profilSlika" class = "rounded" width = "100%">
+            </div>
+            <div class = "col-sm-12 col-md-6 col-lg-9">
+                <table>
+                    <tr>
+                        <td>Korisničko ime:</td>
+                        <td id = "profilId"></td>
+                    </tr>
+                    <tr>
+                        <td>Mejl:</td>
+                        <td id = "profilMejl"></td>
+                    </tr>
+                    <tr>
+                        <td colspan = "2">
+                            <button class = "btn btn-secondary" id = "odjavi">Odjavi se</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class = "row p-3 bg-light" id = "oglasiNaslov">
+            <div class="col-12">
+                <h4>Moji oglasi</h4>
+                <p id = "nemaOglasa">Nema oglasa za prikaz. :)</p>
+            </div>
+        </div>
+        <div class = "row p-3 border-bottom bg-light" id = "oglasi">
+
+        </div>
+        <div class = "row p-3 bg-babyyellow" id = "komentariNaslov">
+            <div class = "col-12">
+                <h4>Moji komentari</h4>
+                <p id = "nemaKomentara">Nema komentara za prikaz.</p>
+            </div>
+        </div>
+        <div class = "row p-3 border-bottom bg-babyyellow" id = "komentari">
+
+        </div>
+        <div class="row footer p-3 pt-4">
+            <div class = "col-sm-12">
+                Copyright 2022, Aleksa Vučković, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu<br>
+            </div>
+            <div class="col-sm-12 pt-2">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+        </div>
+    </div>
+    <script src = "../oglas.js"></script>
+    <script src = "../nalog.js"></script>
+    <script>
+        function isEnglish() {
+            return false;
+        }
+    </script>
+</body>
+</html>
